@@ -8,6 +8,7 @@ class FortunetellingsController < ApplicationController
     @day = date[6,2]
     #今日が誕生日か？
     @birthday = birthday?(date)
-    
+    #星座のやつ
+    @constellation = constellation(@month, @day)
   end
 end
