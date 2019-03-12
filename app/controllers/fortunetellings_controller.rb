@@ -12,6 +12,8 @@ class FortunetellingsController < ApplicationController
     @constellation = constellation(@month, @day)
     #年齢
     @age = (Date.today.strftime("%Y%m%d").to_i - date.to_i) / 10000
+    #おみくじのやつ
+    @fortune = %w(大吉 中吉 吉 小吉 凶 大凶).sample
   end
 
 end
